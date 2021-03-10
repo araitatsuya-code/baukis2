@@ -1,0 +1,15 @@
+current directory: /Users/araitatsuya/workspace/rails6-compose/apps/baukis2/vendor/bundle/gems/websocket-driver-0.7.3/ext/websocket-driver
+/Users/araitatsuya/.rbenv/versions/2.6.4/bin/ruby -I /Users/araitatsuya/.rbenv/versions/2.6.4/lib/ruby/2.6.0 -r ./siteconf20210311-76870-7sy916.rb extconf.rb
+creating Makefile
+
+current directory: /Users/araitatsuya/workspace/rails6-compose/apps/baukis2/vendor/bundle/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/araitatsuya/workspace/rails6-compose/apps/baukis2/vendor/bundle/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/araitatsuya/workspace/rails6-compose/apps/baukis2/vendor/bundle/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20210311-76870-2vmaet
