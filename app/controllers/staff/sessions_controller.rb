@@ -9,12 +9,11 @@ class Staff::SessionsController < Staff::Base
   end
 
   def create
-    @form = Staff::LoginForm.new(params[:staff_login_form])
+    @form = Staff::LoginForm.new(login_form_params)
     if @form.email.present?
       staff_member =
         StaffMember.find_by("LOWER(email) = ?", @form.email.downcase)
     end
-
     if Staff::Authenticator.new(staff_member).authenticate(@form.password)
       if staff_member.suspended?
         flash.now.alert = "アカウントが停止されています。"
@@ -28,6 +27,10 @@ class Staff::SessionsController < Staff::Base
       flash.now.alert = "メールアドレスまたはパスワードが正しくありません。"
       render action: "new"
     end
+  end
+
+  private def login_form_params
+    params.require(:staff_login_form).permit(:email, :password)
   end
 
   def destroy
